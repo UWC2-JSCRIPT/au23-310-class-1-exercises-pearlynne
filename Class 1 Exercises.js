@@ -87,13 +87,15 @@ console.log(addressBlock);
 // Hint: use indexOf, slice, and / or substring
 
 // Create formatted block from Q1
-let string = `${firstName} ${lastName} \n${streetAddress} \n${city}, ${state}, ${zipCode}`;
+let string = `${firstName} ${lastName} 
+${streetAddress} 
+${city}, ${state}, ${zipCode}`;
 
 // Identify space as delimiter
 const searchSpace = ' ';
 
 // Search index of first delimiter
-const indexOfSpace = string.indexOf(searchSpace); // Use addressBlock 
+const indexOfSpace = string.indexOf(searchSpace); 
 
 // Print firstName
 console.log("First name in string is", string.substring(0, indexOfSpace));
@@ -107,7 +109,6 @@ console.log("First name in string is", string.substring(0, indexOfSpace));
 // 1/1/2020 00:00:00 and 4/1/2020 00:00:00
 //
 // Look online for documentation on Date objects.
-
 
 const endDate = new Date(2020, 3, 1); 
 const startDate = new Date (2020, 0, 1); // January is 0
