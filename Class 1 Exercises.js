@@ -50,7 +50,7 @@ const card3 = Math.ceil(Math.random() * HIGHEST_CARD);
 
 const HighestCard = Math.max(card1, card2, card3);
 
-console.log("The highest card is:", HighestCard);
+console.log("The highest card is", HighestCard);
 
 
 /**
@@ -63,15 +63,15 @@ console.log("The highest card is:", HighestCard);
 // that could be printed onto an envelope.
 
 // Create variables
-const firstName = 'Jane';
-const lastName = 'Doe';
-const streetAddress = '123 4th Main St';
-const city = 'Seattle';
-const state = 'Washington';
-const zipCode = '98765';
+const firstName = 'firstName';
+const lastName = 'lastName';
+const streetAddress = 'streetAddress';
+const city = 'city';
+const state = 'state';
+const zipCode = 'zipCode';
 
 // Create formatted address block
-let addressBlock = `${firstName} ${lastName} \n${streetAddress} \n${city}, ${state}, ${zipCode}`;
+let addressBlock = `${firstName} ${lastName} \n${streetAddress} \n${city}, ${state} ${zipCode}`;
 
 console.log(addressBlock);
 
@@ -84,7 +84,7 @@ console.log(addressBlock);
 // Write code that is able to extract the first name from this string into a variable.
 // Hint: use indexOf, slice, and / or substring
 
-// Create formatted
+// Create formatted block from Q1
 let string = `${firstName} ${lastName} \n${streetAddress} \n${city}, ${state}, ${zipCode}`;
 
 // Identify space as delimiter
@@ -94,8 +94,9 @@ const searchSpace = ' ';
 const indexOfSpace = string.indexOf(searchSpace); // Use addressBlock 
 
 // Print firstName
-console.log(string.substring(0, indexOfSpace));
+console.log("First name in string is", string.substring(0, indexOfSpace));
 // console.log(string.substring(0, string.indexOf(searchSpace)))
+
 
 /**
  * FIND THE MIDDLE DATE
@@ -105,14 +106,14 @@ console.log(string.substring(0, indexOfSpace));
 //
 // Look online for documentation on Date objects.
 
-// Starting hint:
+
 const endDate = new Date(2020, 3, 1); 
 const startDate = new Date (2020, 0, 1); // January is 0
 
 // Get difference between dates in seconds
 const elapsedTime = (endDate - startDate) /2;
 
-// Get new date
+// Get new date from elapsed time
 const midDate = new Date(endDate - elapsedTime);
 
 console.log(`The midpoint between ${startDate} and ${endDate} is ${midDate}`);
