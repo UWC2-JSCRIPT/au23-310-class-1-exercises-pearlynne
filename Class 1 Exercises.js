@@ -47,10 +47,11 @@ console.log("The random card is", card);
 const card1 = Math.ceil(Math.random() * HIGHEST_CARD);
 const card2 = Math.ceil(Math.random() * HIGHEST_CARD);
 const card3 = Math.ceil(Math.random() * HIGHEST_CARD);
+// can create function to avoid repeats
 
 const HighestCard = Math.max(card1, card2, card3);
 
-console.log("The highest card is", HighestCard);
+console.log(`The highest card from ${card1}, ${card2}, and ${card3} is ${HighestCard}.`);
 
 
 /**
@@ -71,10 +72,11 @@ const state = 'state';
 const zipCode = 'zipCode';
 
 // Create formatted address block
-let addressBlock = `${firstName} ${lastName} \n${streetAddress} \n${city}, ${state} ${zipCode}`;
+let addressBlock = `${firstName} ${lastName}
+${streetAddress}
+${city}, ${state} ${zipCode}`; // \n for non literals
 
-console.log(addressBlock);
-
+console.log(addressBlock); 
 
 // 2. You are given a string in this format:
 // firstName lastName(assume no spaces in either)
