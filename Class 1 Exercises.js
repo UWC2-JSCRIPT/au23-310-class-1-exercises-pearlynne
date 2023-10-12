@@ -44,14 +44,23 @@ console.log("The random card is", card);
 // 4. Draw 3 cards and use Math to determine the highest
 // card
 
-const card1 = Math.ceil(Math.random() * HIGHEST_CARD);
-const card2 = Math.ceil(Math.random() * HIGHEST_CARD);
-const card3 = Math.ceil(Math.random() * HIGHEST_CARD);
-// can create function to avoid repeats
+// Class Notes
+// const card1 = Math.ceil(Math.random() * HIGHEST_CARD);
+// const card2 = Math.ceil(Math.random() * HIGHEST_CARD);
+// const card3 = Math.ceil(Math.random() * HIGHEST_CARD);
+// const highestCard = Math.max(card1, card2, card3);
+// console.log(`The highest card from ${card1}, ${card2}, and ${card3} is ${highestCard}.`);
 
-const HighestCard = Math.max(card1, card2, card3);
+let cards = [];
+const NUM_CARDS = 3;
 
-console.log(`The highest card from ${card1}, ${card2}, and ${card3} is ${HighestCard}.`);
+for (i = 0; i < NUM_CARDS; i++) {
+	cards[i] = Math.ceil(Math.random() * HIGHEST_CARD);
+}
+
+highestCardDrawn = Math.max(...cards);
+
+console.log(`The highest card drawn from ${cards} is ${highestCardDrawn}`);
 
 
 /**
@@ -76,7 +85,7 @@ let addressBlock = `${firstName} ${lastName}
 ${streetAddress}
 ${city}, ${state} ${zipCode}`; // \n for non literals
 
-console.log(addressBlock); 
+console.log(addressBlock);
 
 // 2. You are given a string in this format:
 // firstName lastName(assume no spaces in either)
@@ -95,7 +104,7 @@ ${city}, ${state}, ${zipCode}`;
 const searchSpace = ' ';
 
 // Search index of first delimiter
-const indexOfSpace = string.indexOf(searchSpace); 
+const indexOfSpace = string.indexOf(searchSpace);
 
 // Print firstName
 console.log("First name in string is", string.substring(0, indexOfSpace));
@@ -110,11 +119,11 @@ console.log("First name in string is", string.substring(0, indexOfSpace));
 //
 // Look online for documentation on Date objects.
 
-const endDate = new Date(2020, 3, 1); 
-const startDate = new Date (2020, 0, 1); // January is 0
+const endDate = new Date(2020, 3, 1);
+const startDate = new Date(2020, 0, 1); // January is 0
 
 // Get difference between dates in seconds
-const elapsedTime = (endDate - startDate) /2;
+const elapsedTime = (endDate - startDate) / 2;
 
 // Get new date from elapsed time
 const midDate = new Date(endDate - elapsedTime);
