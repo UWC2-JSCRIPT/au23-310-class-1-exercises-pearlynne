@@ -6,9 +6,22 @@
 // What is the area for each of these pizzas?
 // (radius would be the listed size - i.e. 13" - divided by 2)
 
+const SMALL_PIZZA_DIAMETER = 13;
+const LARGE_PIZZA_DIAMETER = 17;
+const SMALL_PIZZA_PRICE = 16.99;
+const LARGE_PIZZA_PRICE = 19.99;
+
+const smallPizzaArea = Math.PI * ((SMALL_PIZZA_DIAMETER / 2) ** 2);
+const largPizzaArea = Math.PI * ((LARGE_PIZZA_DIAMETER / 2) ** 2);
+
 
 // 2. What is the cost per square inch of each pizza?
 
+const smallPizzaCostPerSqInch = SMALL_PIZZA_PRICE / smallPizzaArea;
+const largePizzaCostPerSqInch = LARGE_PIZZA_PRICE / largePizzaArea;
+
+console.log(smallPizzaArea)
+console.log(largPizzaArea)
 
 // 3. Using the Math object, put together a code snippet
 // that allows you to draw a random card with a value
