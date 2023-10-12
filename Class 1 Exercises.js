@@ -17,6 +17,7 @@ const largePizzaArea = Math.PI * ((LARGE_PIZZA_DIAMETER / 2) ** 2);
 console.log("The area of the small pizza is", smallPizzaArea);
 console.log("The area of the large pizza is", largePizzaArea);
 
+
 // 2. What is the cost per square inch of each pizza?
 
 const smallPizzaCostPerSqInch = SMALL_PIZZA_PRICE / smallPizzaArea;
@@ -24,6 +25,7 @@ const largePizzaCostPerSqInch = LARGE_PIZZA_PRICE / largePizzaArea;
 
 console.log("The cost per square inch of the small pizza is", smallPizzaCostPerSqInch);
 console.log("The cost per square inch of the large pizza is", largePizzaCostPerSqInch);
+
 
 // 3. Using the Math object, put together a code snippet
 // that allows you to draw a random card with a value
@@ -33,11 +35,11 @@ const LOWEST_CARD = 1;
 const HIGHEST_CARD = 13;
 
 // Math.random gives fraction and between 0 and 1. 
-// so we have to use Math.ceil and we have to get highlest 13
-
+// so we have to use Math.ceil and we have to get highest 13
 const card = Math.ceil(Math.random() * HIGHEST_CARD);
 
 console.log("The random card is", card);
+
 
 // 4. Draw 3 cards and use Math to determine the highest
 // card
@@ -60,16 +62,19 @@ console.log("The highest card is:", HighestCard);
 // this information to create a formatted address block
 // that could be printed onto an envelope.
 
-const firstName = 'Pearl';
-const lastName = 'Chong'
-const streetAddress = '123 4th Main St'
-const city = 'Seattle'
-const state = 'Washingtion'
-const zipCode = '98100'
+// Create variables
+const firstName = 'Jane';
+const lastName = 'Doe';
+const streetAddress = '123 4th Main St';
+const city = 'Seattle';
+const state = 'Washington';
+const zipCode = '98765';
 
-let addressBlock = `${firstName} ${lastName} \n${streetAddress} \n${city}, ${state}, ${zipCode}`
+// Create formatted address block
+let addressBlock = `${firstName} ${lastName} \n${streetAddress} \n${city}, ${state}, ${zipCode}`;
 
-console.log(addressBlock)
+console.log(addressBlock);
+
 
 // 2. You are given a string in this format:
 // firstName lastName(assume no spaces in either)
@@ -79,6 +84,18 @@ console.log(addressBlock)
 // Write code that is able to extract the first name from this string into a variable.
 // Hint: use indexOf, slice, and / or substring
 
+// Create formatted
+let string = `${firstName} ${lastName} \n${streetAddress} \n${city}, ${state}, ${zipCode}`;
+
+// Identify space as delimiter
+const searchSpace = ' ';
+
+// Search index of first delimiter
+const indexOfSpace = string.indexOf(searchSpace) // Use addressBlock 
+
+// Print firstName
+console.log(string.substring(0, indexOfSpace)) 
+// console.log(string.substring(0, string.indexOf(searchSpace)))
 
 /**
  * FIND THE MIDDLE DATE
