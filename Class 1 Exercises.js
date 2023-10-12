@@ -29,12 +29,26 @@ console.log("The cost per square inch of the large pizza is", largePizzaCostPerS
 // that allows you to draw a random card with a value
 // between 1 and 13 (assume ace is 1, jack is 11…)
 
+const LOWEST_CARD = 1
+const HIGHEST_CARD = 13
 
 // Math.random gives fraction and between 0 and 1. 
 // so we have to use Math.ceil and we have to get highlest 13
 
+const card = Math.ceil(Math.random() * HIGHEST_CARD)
+
+console.log("The random card is", card)
+
 // 4. Draw 3 cards and use Math to determine the highest
 // card
+
+const card1 = Math.ceil(Math.random() * HIGHEST_CARD)
+const card2 = Math.ceil(Math.random() * HIGHEST_CARD)
+const card3 = Math.ceil(Math.random() * HIGHEST_CARD)
+
+const HighestCard = Math.max(card1, card2, card3)
+
+console.log("The highest card is:", HighestCard)
 
 /**
  * ADDRESS LINE
