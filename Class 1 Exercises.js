@@ -44,7 +44,6 @@ console.log("The random card is", card);
 // 4. Draw 3 cards and use Math to determine the highest
 // card
 
-// Class Notes
 // const card1 = Math.ceil(Math.random() * HIGHEST_CARD);
 // const card2 = Math.ceil(Math.random() * HIGHEST_CARD);
 // const card3 = Math.ceil(Math.random() * HIGHEST_CARD);
@@ -55,7 +54,7 @@ let cards = [];
 const NUM_CARDS = 3;
 
 for (i = 0; i < NUM_CARDS; i++) {
-	cards[i] = Math.ceil(Math.random() * HIGHEST_CARD);
+	cards[i] = Math.ceil(Math.random() * HIGHEST_CARD); // Variable in Q3
 }
 
 highestCardDrawn = Math.max(...cards);
@@ -108,7 +107,6 @@ const indexOfSpace = string.indexOf(searchSpace);
 
 // Print firstName
 console.log("First name in string is", string.substring(0, indexOfSpace));
-// console.log(string.substring(0, string.indexOf(searchSpace)))
 
 
 /**
