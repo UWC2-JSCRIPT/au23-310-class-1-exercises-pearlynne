@@ -91,10 +91,10 @@ let string = `${firstName} ${lastName} \n${streetAddress} \n${city}, ${state}, $
 const searchSpace = ' ';
 
 // Search index of first delimiter
-const indexOfSpace = string.indexOf(searchSpace) // Use addressBlock 
+const indexOfSpace = string.indexOf(searchSpace); // Use addressBlock 
 
 // Print firstName
-console.log(string.substring(0, indexOfSpace)) 
+console.log(string.substring(0, indexOfSpace));
 // console.log(string.substring(0, string.indexOf(searchSpace)))
 
 /**
@@ -106,4 +106,13 @@ console.log(string.substring(0, indexOfSpace))
 // Look online for documentation on Date objects.
 
 // Starting hint:
-const endDate = new Date(2019, 3, 1);
+const endDate = new Date(2020, 3, 1); 
+const startDate = new Date (2020, 0, 1); // January is 0
+
+// Get difference between dates in seconds
+const elapsedTime = (endDate - startDate) /2;
+
+// Get new date
+const midDate = new Date(endDate - elapsedTime);
+
+console.log(`The midpoint between ${startDate} and ${endDate} is ${midDate}`);
