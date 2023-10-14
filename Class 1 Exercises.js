@@ -120,10 +120,10 @@ console.log("First name in string is", string.substring(0, indexOfSpace));
 const endDate = new Date(2020, 3, 1);
 const startDate = new Date(2020, 0, 1); // January is 0
 
-// Get difference between dates in seconds
-const elapsedTime = (endDate - startDate) / 2;
+// Get difference between dates in seconds (endDate object converts to seconds without getTime())
+const elapsedTime = (endDate.getTime() - startDate.getTime()) / 2;
 
 // Get new date from elapsed time
-const midDate = new Date(endDate - elapsedTime);
+const midDate = new Date(endDate.getTime() - elapsedTime);
 
 console.log(`The midpoint between ${startDate} and ${endDate} is ${midDate}`);
